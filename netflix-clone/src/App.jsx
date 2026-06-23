@@ -1,9 +1,9 @@
 import React from 'react'
-
+import Home from './Pages/Home/Home.jsx'
 export default function App() {
   return (
-    <div>
-      <h1>Netflix Clone</h1>
-    </div>
+    <>
+      <Home />
+    </>
   )
 }

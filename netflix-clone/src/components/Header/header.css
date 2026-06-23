@@ -1,0 +1,83 @@
+/* Netflix-like header styles */
+.header_outer_container{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(180deg, rgba(0,0,0,0.95), rgba(0,0,0,0.6));
+    color: #fff;
+    transition: background 0.25s ease;
+}
+
+.nav_black{
+    background-color: rgb(20,20,20);
+}
+
+.header_container{
+    width: 90%;
+    margin: 0 auto;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_left ul{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header_left li{
+    color: #fff;
+    font-size: 0.95rem;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.header_left li img{
+    height: 36px;
+    display: block;
+}
+
+.header_left li:hover{
+    opacity: 0.85;
+}
+
+.header_right ul{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header_right .icon{
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.05rem;
+}
+
+.header_right .avatar{
+    width: 34px;
+    height: 34px;
+    border-radius: 4px;
+    background: #666;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+@media (max-width: 900px){
+    /* hide secondary nav items on smaller screens (keep logo) */
+    .header_left li:not(:first-child){
+        display: none;
+    }
+}
