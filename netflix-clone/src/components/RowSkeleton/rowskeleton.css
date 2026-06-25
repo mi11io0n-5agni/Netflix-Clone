@@ -1,0 +1,58 @@
+.row_skeleton {
+  margin-left: 20px;
+  margin-bottom: 24px;
+}
+
+.row_skeleton_title {
+  width: 180px;
+  height: 24px;
+  background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.row_skeleton_posters {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.row_skeleton_poster {
+  flex-shrink: 0;
+  width: 180px;
+  height: 100px;
+  background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+  border-radius: 4px;
+}
+
+.row_skeleton_poster--large {
+  width: 160px;
+  height: 250px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.banner_skeleton {
+  height: 60vh;
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+@media (max-width: 768px) {
+  .banner_skeleton {
+    height: 50vh;
+  }
+}

@@ -1,0 +1,146 @@
+.search_container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search_toggle {
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+
+.search_panel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 8px;
+  animation: searchSlideIn 0.2s ease;
+}
+
+@keyframes searchSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.search_input {
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 6px 12px;
+  width: 220px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.search_input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search_close {
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+}
+
+.search_results {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  width: 320px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: rgba(20, 20, 20, 0.98);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  z-index: 1001;
+}
+
+.search_message {
+  color: #aaa;
+  padding: 16px;
+  font-size: 0.9rem;
+}
+
+.search_result {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.search_result:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.search_result_poster {
+  width: 40px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.search_result_title {
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.search_result_type {
+  color: #888;
+  font-size: 0.75rem;
+  margin-top: 4px;
+}
+
+.search_add_btn {
+  margin-left: auto;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search_add_btn:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.search_add_btn--saved {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+}
+
+@media (max-width: 600px) {
+  .search_input {
+    width: 160px;
+  }
+
+  .search_results {
+    width: 280px;
+  }
+}

@@ -19,3 +19,16 @@ body {
  body{
   background-color: #111;
  }
+
+.page_loading {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.main_content {
+  padding-top: 64px;
+}

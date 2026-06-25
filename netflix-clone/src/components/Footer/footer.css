@@ -44,10 +44,28 @@
 }
 
 .footer_data ul li{
-    cursor: pointer;
+    margin: 6px 0;
+}
+
+.footer_data ul li a{
     color: #b3b3b3;
     font-size: 14px;
-    margin: 6px 0;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer_data ul li a:hover,
+.footer_data ul li a:focus{
+    color: #fff;
+}
+
+.footer_icons a{
+    color: #fff;
+    display: inline-flex;
+}
+
+.footer_icons a + a{
+    margin-left: 12px;
 }
 
 .service_code{
@@ -59,6 +77,12 @@
     padding: 8px 12px;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.footer_page_label{
+    color: #e5e5e5;
+    font-size: 14px;
+    letter-spacing: 0.02em;
 }
 
 .copy_right{
